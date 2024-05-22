@@ -6,6 +6,7 @@ import { FaTrash } from "react-icons/fa";
 import { addToFav, clearAll, removeFromWishlist } from '../../redux/slices/wishlistSlice';
 import { SlBasket } from "react-icons/sl";
 import { addBasket } from '../../redux/slices/basketSlices';
+import { Helmet } from 'react-helmet';
 
 const Wishlist = () => {
   const wishlist =useSelector((state)=>state.wishlist.wishlist)
@@ -23,6 +24,11 @@ const Wishlist = () => {
 
   return (
     <div>
+       <Helmet>
+        <meta charSet="utf-8" />
+        <title> Wishlist</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <button onClick={()=>dispatch(clearAll())}>clear all</button>
       <div className={style.main}>
         {wishlist?.map((elem) => {

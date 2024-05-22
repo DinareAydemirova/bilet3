@@ -10,6 +10,7 @@ import {
   removeFromBasket,
 } from "../../redux/slices/basketSlices";
 import { addToFav, removeFromWishlist } from "../../redux/slices/wishlistSlice";
+import { Helmet } from "react-helmet";
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,11 @@ const Basket = () => {
 
   return (
     <div>
+       <Helmet>
+        <meta charSet="utf-8" />
+        <title> Basket</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <button onClick={() => dispatch(removeAll())}>clear all</button>
       <div className={style.main}>
         {basket?.map((elem) => {
