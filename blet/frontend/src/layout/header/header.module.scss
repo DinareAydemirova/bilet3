@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    h2 {
+      border: 1px solid white;
+      padding: 4px 8px;
+      color: white;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+    }
+    .baswis{
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+.navbar {
+  background-image: url("./../../assets//bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
